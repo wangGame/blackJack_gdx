@@ -8,6 +8,7 @@ import kw.test.blackkjack.card.CardPanel;
 import kw.test.blackkjack.data.CardData;
 
 public class CardUtils {
+    private Random random = new Random();
     private static CardUtils cardUtils;
     private Array<CardData> cardDatas;
     public static CardUtils getCardUtils() {
@@ -22,7 +23,6 @@ public class CardUtils {
         initDeskCard();
     }
 
-    private Random random = new Random(1);
     public Array<CardData> initDeskCard(){
         /**
          * 0 黑桃

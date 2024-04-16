@@ -15,16 +15,20 @@ public abstract class Iplayer {
         int score = 0;
         for (CardPanel cardPanel : cardPanels) {
             int cardNum = cardPanel.getCardNum();
-            score += cardNum;
+            if (cardNum>10){
+                score += 10;
+            }else {
+                score += cardNum;
+            }
             if (cardNum == 1){
                 isA ++;
             }
         }
         for (int i = 0; i < isA; i++) {
-            if (score > 12) {
+            if (score > 11) {
                 break;
             }
-            score += 9;
+            score += 10;
         }
         return score;
     }
@@ -39,4 +43,7 @@ public abstract class Iplayer {
         System.out.println(toString());
     }
 
+    public void clear(){
+        cardPanels.clear();
+    }
 }
